@@ -1,17 +1,21 @@
+/**
+* @Purpose : Rendering a client-facing instagram application 
+* @database : connecting to our database of firebase 
+* @dependencies : react-loading skeleton 
+* @styling : tailwind css
+* @architecture : components, constants, context, helpers, lib (for firebase), services (firebase functions)  
+* * */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import FirebaseContext from './context/firebase';
+import { firebase, FieldValue } from './lib/firebase';
+import './styles/app.css';
 
 ReactDOM.render(
-  <React.StrictMode>
+  <FirebaseContext.Provider value={{ firebase, FieldValue }}>
     <App />
-  </React.StrictMode>,
+  </FirebaseContext.Provider>,
   document.getElementById('root')
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
