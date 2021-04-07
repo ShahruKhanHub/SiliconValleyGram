@@ -1,4 +1,4 @@
-## What is silicongram? 
+## What is SiliconGram? 
 Social networking - but more silicony 
 
 # The User Journey is the Destination 
@@ -7,9 +7,14 @@ Consists of several pages:
 - login 
 - timeline
 - dashboard
+- stateful profile page
+
 
 # Setup - Pied Piper Style:
-- npm i or use yarn and you are set to take off 
+- npm i or use yarn - then set to take off 
+- can sign up as a new user or use mock user on sign in 
+  - UN: PatrickMahomes@gmail.com 
+  - PW: MVPMVP 
 - Note: call the seedDatabase only once in lib/firebase to prevent repeated data  
 
 # Stack of Tech 
@@ -17,7 +22,10 @@ Consists of several pages:
 - React Hooks 
 - React Context
 - CSS - but from the tail (tailwind) 
+- SVGs
 - A database that's on fire (Firebase)  
+- Validation/Authentication via Firebase
+
 
 # Some tradeoffs and design choices that might keep you up at night 
 - For choice of database, intially wanted to model IG clone off of what the company uses (two backend database systems: PostgreSQL and Cassandra). However, since the goal of this project was to get set up quickly, firebase was a better bet. When evaluating what database to use, it's important to take account of the scope of the product(s), scalability and flexibility to see whether a relational or other non-relational database is a better choice. 
@@ -29,6 +37,14 @@ Consists of several pages:
    - inserted alt text on images and aria-labels on text for a similar reason 
 - Integration of react memo to prevent unnecessary rerenders and optimize performance 
 - For this exercise used PropTypes to typecheck application and catch potential bugs - for larger more complex applications, TypeScript or Flow are better  
+
+# Stretch them features
+
+- Create mechanism for user generated content 
+- Streamline posting feature so user comments are clearer, accessible and interactive 
+- Integrate testing library to catch bugs as codebase scales 
+- Save users in a more scalable environment 
+- Create mechanism for users to share images or change their profile image 
 
 # Preview
 
